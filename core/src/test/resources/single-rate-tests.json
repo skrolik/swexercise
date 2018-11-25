@@ -1,0 +1,29 @@
+{
+  "rates" : {
+    "good-rate": {
+      "jcr:primaryType": "nt:unstructured",
+      "zipCodeRange": "90000-91000",
+      "rate": 125,
+      "sling:resourceType": "swexercise/components/configuration/single-rate",
+      "ageRange": "20-30"
+    },
+    "missing-values": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "swexercise/components/configuration/single-rate"
+    },
+    "bad-range": {
+      "jcr:primaryType": "nt:unstructured",
+      "zipCodeRange": "90000",
+      "rate": 125,
+      "sling:resourceType": "swexercise/components/configuration/single-rate",
+      "ageRange": "20-30"
+    },
+    "bad-separator": {
+      "jcr:primaryType": "nt:unstructured",
+      "zipCodeRange": "90000:91000",
+      "rate": 125,
+      "sling:resourceType": "swexercise/components/configuration/single-rate",
+      "ageRange": "20-30"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<div>
+    <div data-sly-test="${!properties.ageLabel || !properties.zipCodeLabel || !properties.genderLabel || !properties.genderEmptyOption ||
+        !properties.genderMaleLabel || !properties.genderFemaleLabel || !properties.submitLabel}">
+        Please fill all required fields
+    </div>
+    <form method="post" action="${resource.path}.calculate.html" id="calculateform">
+        <div data-sly-resource="${'form-items-parsys' @ resourceType='wcm/foundation/components/parsys'}" data-sly-unwrap="${!wcmmode.edit}">
+
+        </div>
+    </form>
+</div>

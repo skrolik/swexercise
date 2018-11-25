@@ -7,24 +7,14 @@
     ranking="{Long}100">
     <jcr:content
         jcr:primaryType="cq:PageContent"
-        sling:resourceType="swexercise/components/structure/page">
-        <logo
-            jcr:primaryType="nt:unstructured"
-            sling:resourceType="swexercise/components/structure/logo"/>
+        cq:designPath="/etc/designs/swexercise"
+        sling:resourceType="swexercise/pages/page">
         <title
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swexercise/components/content/title"/>
-        <topnav
-            jcr:primaryType="nt:unstructured"
-            sling:resourceType="swexercise/components/structure/topnav"/>
         <par
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/parsys">
-            <text
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="swexercise/components/content/text"
-                text="&lt;p>This is a home page&lt;/p>"
-                textIsRich="true"/>
         </par>
     </jcr:content>
 </jcr:root>

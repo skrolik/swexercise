@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/swexercise"
+        cq:lastModified="{Date}2018-11-25T20:35:08.640Z"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/swexercise/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Insurance Calculator"
+        sling:resourceType="swexercise/pages/page">
+        <title
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swexercise/components/content/title"/>
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <insurance_calculate_
+                jcr:created="{Date}2018-11-25T20:15:35.664Z"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2018-11-25T20:24:50.650Z"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swexercise/components/form/insurance-calculate-form"
+                ageLabel="Age"
+                gender="MALE"
+                genderEmptyOption="Please select gender"
+                genderFemaleLabel="Female"
+                genderLabel="Gender"
+                genderMaleLabel="Male"
+                submitLabel="Send"
+                zipCode="1"
+                zipCodeLabel="Zip Code"/>
+        </par>
+    </jcr:content>
+</jcr:root>

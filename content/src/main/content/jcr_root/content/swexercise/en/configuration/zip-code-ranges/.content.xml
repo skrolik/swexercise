@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/swexercise"
+        cq:lastModified="{Date}2018-11-25T16:26:43.615Z"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/swexercise/templates/generic-list-template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Zip Code Ranges"
+        sling:resourceType="swexercise/pages/generic-list-page">
+        <generic-list-items
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <generic_list_item
+                jcr:created="{Date}2018-11-25T16:08:39.283Z"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2018-11-25T16:09:00.265Z"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swexercise/components/configuration/generic-list-item"
+                label="90000-91000"
+                value="90000-91000"/>
+            <generic_list_item_531066845
+                jcr:created="{Date}2018-11-25T16:09:02.819Z"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2018-11-25T16:09:23.585Z"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swexercise/components/configuration/generic-list-item"
+                label="91000-99000"
+                value="91000-99000"/>
+            <generic_list_item_901915348
+                jcr:created="{Date}2018-11-25T16:09:25.813Z"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2018-11-25T16:26:31.799Z"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swexercise/components/configuration/generic-list-item"
+                label="99000-99999"
+                value="99000-99999"/>
+            <generic_list_item_1493551008
+                jcr:created="{Date}2018-11-25T16:26:33.982Z"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2018-11-25T16:26:43.613Z"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swexercise/components/configuration/generic-list-item"
+                label="99999"
+                value="99999-100000"/>
+        </generic-list-items>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,10 @@
+<div data-sly-use.model="org.saweko.swexercise.core.model.SingleRateModel" style="margin-bottom: 5px; border: 1px solid black">
+    <div data-sly-test="${model.anyNull}" style="background: grey; margin: 5px; border: 1px solid red;">
+        <strong>Missing values, please edit!</strong>
+    </div>
+
+    <p>Age ranges: start: <strong>${model.ageRangeStart}</strong>, end: <strong>${model.ageRangeEnd}</strong>,
+        Zip code ranges: start: <strong>${model.zipCodeRangeStart}</strong>, end:
+        <strong>${model.zipCodeRangeEnd}</strong></p>
+    <p>Rate: <strong>${'#.00' @ format=model.rate }</strong></p>
+</div>
