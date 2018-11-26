@@ -1,11 +1,12 @@
 <div>
-    <div data-sly-test="${!properties.ageLabel || !properties.zipCodeLabel || !properties.genderLabel || !properties.genderEmptyOption ||
-        !properties.genderMaleLabel || !properties.genderFemaleLabel || !properties.submitLabel}">
-        Please fill all required fields
-    </div>
+    <h1>Form title</h1>
     <form method="post" action="${resource.path}.calculate.html" id="calculateform">
         <div data-sly-resource="${'form-items-parsys' @ resourceType='wcm/foundation/components/parsys'}" data-sly-unwrap="${!wcmmode.edit}">
 
         </div>
     </form>
+    <div data-sly-use.attributes="org.saweko.swexercise.core.util.RequestAttributeModel"
+         data-sly-test="${attributes.calculationResult}">
+        ${attributes.calculationResult}
+    </div>
 </div>

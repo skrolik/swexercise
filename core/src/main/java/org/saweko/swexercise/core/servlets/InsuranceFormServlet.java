@@ -3,7 +3,6 @@ package org.saweko.swexercise.core.servlets;
 import com.day.cq.i18n.I18n;
 import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageManager;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.request.RequestDispatcherOptions;
@@ -17,7 +16,6 @@ import org.saweko.swexercise.core.service.InsuranceCalculatorService;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.Servlet;
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 @Component(service = Servlet.class, property = {
@@ -37,7 +35,6 @@ public class InsuranceFormServlet extends SlingAllMethodsServlet {
     @Reference
     private InsuranceCalculatorService insuranceCalculatorService;
 
-
     @Override
     protected void doPost(final SlingHttpServletRequest request, final SlingHttpServletResponse response) {
         final I18n i18n = new I18n(request);
@@ -54,6 +51,7 @@ public class InsuranceFormServlet extends SlingAllMethodsServlet {
                 return "GET";
             }
         };
+        wrapperRequest.setAttribute("calculationResult", new Double("321"));
 
         final RequestDispatcher rd = request.getRequestDispatcher(p.getPath(), rdo);
         try {
@@ -66,6 +64,4 @@ public class InsuranceFormServlet extends SlingAllMethodsServlet {
 
 
     }
-
-    private void forwardResponse()
 }
