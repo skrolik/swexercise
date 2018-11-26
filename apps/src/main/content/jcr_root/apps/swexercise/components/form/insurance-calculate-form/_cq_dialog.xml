@@ -21,52 +21,80 @@
                     <column jcr:primaryType="nt:unstructured"
                             sling:resourceType="granite/ui/components/foundation/container">
                         <items jcr:primaryType="nt:unstructured">
-                            <ageLabel
+                            <configurationPage
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                    forceSelection="{Boolean}true"
+                                    required="true"
+                                    fieldLabel="Configuration path"
+                                    name="./configurationPath"
+                                    rootPath="/content/swexercise"/>
+                            <formTitle
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="granite/ui/components/foundation/form/textfield"
-                                    fieldLabel="Age label"
+                                    fieldLabel="Form title"
                                     required="true"
-                                    name="./ageLabel"/>
-                            <zipCodeLabel
+                                    name="./formTitle"/>
+                            <backLinkLabel
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="granite/ui/components/foundation/form/textfield"
-                                    fieldLabel="Zip Code label"
+                                    fieldLabel="Back button label"
                                     required="true"
-                                    name="./zipCodeLabel"/>
-                            <genderLabel
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
-                                    fieldLabel="Gender label"
-                                    required="true"
-                                    name="./genderLabel"/>
-                            <genderEmptyOption
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
-                                    fieldLabel="Gender empty option"
-                                    required="true"
-                                    name="./genderEmptyOption"/>
-                            <genderMaleOption
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
-                                    fieldLabel="Gender Male option"
-                                    required="true"
-                                    name="./genderMaleLabel"/>
-                            <genderFemaleLabel
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
-                                    fieldLabel="Gender Female option"
-                                    required="true"
-                                    name="./genderFemaleLabel"/>
-                            <submitLabel
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
-                                    fieldLabel="Submit label"
-                                    required="true"
-                                    name="./submitLabel"/>
+                                    name="./backLinkLabel"/>
                         </items>
                     </column>
                 </items>
             </general>
+            <success jcr:primaryType="nt:unstructured"
+                     jcr:title="Success labels"
+                     sling:resourceType="granite/ui/components/foundation/section"
+                     sling:orderBefore="common">
+                <layout jcr:primaryType="nt:unstructured"
+                        margin="false"
+                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/container">
+                        <successTitle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Title"
+                                required="true"
+                                name="./successTitle"/>
+                        <successMessage
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Message"
+                                required="true"
+                                name="./successMessage"/>
+                    </column>
+                </items>
+            </success>
+            <noResults jcr:primaryType="nt:unstructured"
+                     jcr:title="No results labels"
+                     sling:resourceType="granite/ui/components/foundation/section"
+                     sling:orderBefore="common">
+                <layout jcr:primaryType="nt:unstructured"
+                        margin="false"
+                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/container">
+                        <noResultsTitle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Title"
+                                required="true"
+                                name="./noResultsTitle"/>
+                        <noResultsMessage
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Message"
+                                required="true"
+                                name="./noResultsMessage"/>
+                    </column>
+                </items>
+            </noResults>
         </items>
     </content>
 </jcr:root>

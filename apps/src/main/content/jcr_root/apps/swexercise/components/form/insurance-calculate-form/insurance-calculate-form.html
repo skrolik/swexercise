@@ -1,12 +1,23 @@
-<div>
-    <h1>Form title</h1>
+<div class="form-style-8">
+    <div data-sly-test="${wcmmode.edit}"
+            class="error" data-sly-test="${!properties.formTitle || !properties.successTitle || !properties.successMessage
+            || !properties.backLinkLabel || !properties.configurationPath || !properties.noResultsMessage || !properties.noResultsTitle}" >
+        Form properties are missing, please fill those in dialog. Form won't work properly
+    </div>
+
+    <h1>${properties.formTitle}</h1>
+
     <form method="post" action="${resource.path}.calculate.html" id="calculateform">
-        <div data-sly-resource="${'form-items-parsys' @ resourceType='wcm/foundation/components/parsys'}" data-sly-unwrap="${!wcmmode.edit}">
+        <div data-sly-resource="${'form-items-parsys' @ resourceType='wcm/foundation/components/parsys'}"
+             data-sly-unwrap="${!wcmmode.edit}">
 
         </div>
     </form>
     <div data-sly-use.attributes="org.saweko.swexercise.core.util.RequestAttributeModel"
          data-sly-test="${attributes.calculationResult}">
-        ${attributes.calculationResult}
+        <hr/>
+        <h1>Calculation result is: <br/>
+            ${attributes.calculationResult}
+        </h1>
     </div>
 </div>

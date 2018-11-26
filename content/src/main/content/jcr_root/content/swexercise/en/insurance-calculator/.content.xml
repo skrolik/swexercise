@@ -19,6 +19,13 @@
                 jcr:lastModified="{Date}2018-11-25T20:24:50.650Z"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
+                formTitle="Calculate your rate"
+                backLinkLabel="back to form"
+                configurationPath="/content/swexercise/en/configuration/rates-configuration"
+                successTitle="Success"
+                successMessage="Result is: "
+                noResultsTitle="No results, try again"
+                noResultsMessage="There were no results for your query"
                 sling:resourceType="swexercise/components/form/insurance-calculate-form">
                 <form-items-parsys
                     jcr:primaryType="nt:unstructured"
@@ -53,13 +60,9 @@
                         source="local"
                         type="drop-down">
                         <items jcr:primaryType="nt:unstructured">
-                            <item0
-                                jcr:primaryType="nt:unstructured"
-                                disabled="true"
-                                selected="true"
-                                text="Please select"/>
                             <item1
                                 jcr:primaryType="nt:unstructured"
+                                selected="true"
                                 text="Male"
                                 value="MALE"/>
                             <item2

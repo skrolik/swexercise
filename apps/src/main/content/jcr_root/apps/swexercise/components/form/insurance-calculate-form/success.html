@@ -1,0 +1,10 @@
+<div class="form-style-8" data-sly-use.attributes="org.saweko.swexercise.core.util.RequestAttributeModel">
+    <h1>${properties.successTitle}</h1>
+    <div data-sly-test="${attributes.calculationResult}">
+        <hr/>
+        <h2>${properties.successMessage}: <br/>
+            ${attributes.calculationResult}
+        </h2>
+    </div>
+    <a href="${attributes.backUrl}.html">${properties.backLinkLabel}</a>
+</div>
