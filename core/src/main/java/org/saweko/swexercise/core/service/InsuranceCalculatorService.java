@@ -4,7 +4,6 @@ import org.apache.commons.lang3.Validate;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Reference;
 import org.saweko.swexercise.core.model.Gender;
 import org.saweko.swexercise.core.model.InsuranceRatesModel;
 import org.saweko.swexercise.core.model.SingleRateModel;
@@ -18,14 +17,12 @@ import java.util.List;
 public class InsuranceCalculatorService {
     private static final Logger LOG = LoggerFactory.getLogger(InsuranceCalculatorService.class);
 
-    @Reference
-    private ResourceResolver resourceResolver;
 
-    public Double calculateRate(final String configurationPath, final Integer age, final Integer zipCode, final Gender gender)
+    public Double calculateRate(final ResourceResolver resolver, final String configurationPath, final Integer age, final Integer zipCode, final Gender gender)
             throws InsuranceCalculatorException {
         Validate.noNullElements(new Object[]{age, zipCode, gender}, "Arguments cannot be null!");
         Validate.notBlank(configurationPath);
-        final Resource configurationResource = resourceResolver.getResource(configurationPath);
+        final Resource configurationResource = resolver.getResource(configurationPath);
 
         if (configurationResource == null) {
             LOG.error("Cannot access configuration resource under path: {}", configurationPath);
