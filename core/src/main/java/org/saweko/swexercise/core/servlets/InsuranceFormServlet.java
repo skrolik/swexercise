@@ -37,21 +37,20 @@ public class InsuranceFormServlet extends SlingAllMethodsServlet {
     /**
      * resource configuration path
      */
-    private static final String PN_CONFIGURATION_PATH = "configurationPath";
+    static final String PN_CONFIGURATION_PATH = "configurationPath";
 
     /**
      * incoming request parameters names
      */
-    private static final String P_ZIP_CODE = "zipCode";
-    private static final String P_AGE = "age";
-    private static final String P_GENDER = "gender";
+    static final String P_ZIP_CODE = "zipCode";
+    static final String P_AGE = "age";
+    static final String P_GENDER = "gender";
 
     /**
      * outgoing attributes names
      */
-    private static final String A_RESULT = "calculationResult";
-    private static final String A_NO_RESULT = "noResult";
-    private static final String A_BACK_URL = "backUrl";
+    static final String A_RESULT = "calculationResult";
+    static final String A_BACK_URL = "backUrl";
 
     @Reference
     private InsuranceCalculatorService insuranceCalculatorService;

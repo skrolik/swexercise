@@ -1,0 +1,16 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "jcr:createdBy": "admin",
+  "jcr:lastModifiedBy": "admin",
+  "noResultsTitle": "No results, try again",
+  "successTitle": "Success",
+  "jcr:created": "Sun Nov 25 2018 20:15:35 GMT+0000",
+  "backLinkLabel": "back to form",
+  "configurationPath": "/content/swexercise/en/configuration/rates-configuration",
+  "jcr:lastModified": "Sun Nov 25 2018 20:24:50 GMT+0000",
+  "successMessage": "Result is: ",
+  "sling:resourceType": "swexercise/components/form/insurance-calculate-form",
+  "noResultsMessage": "There were no results for your query",
+  "formTitle": "Calculate your rate"
+}
+
